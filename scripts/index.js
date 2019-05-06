@@ -27,17 +27,7 @@ function gameToggle(num) {
 }
 
 function generateNum() {
-  const randomNum = Math.random().toFixed(2);
-
-  if (randomNum >= 0 && randomNum < 0.25) {
-    return 0;
-  } else if (randomNum >= 0.25 && randomNum < 0.5) {
-    return 1;
-  } else if (randomNum >= 0.5 && randomNum < 0.75) {
-    return 2;
-  } else {
-    return 3;
-  }
+  return Math.floor(Math.random() * 4)
 }
 
 function updateLevelText() {
@@ -74,7 +64,9 @@ function playRound() {
     }, i * 1000);
   }
 
-  updateGameDescription("Now click");
+  setTimeout(() => {
+    updateGameDescription("Now click");
+  }, answers.length * 1000);
 }
 
 function checkAnswer(event) {
