@@ -1,0 +1,54 @@
+.container {
+  text-align: center;
+}
+
+#boxContainer {
+  display: flex;
+  width: 300px;
+  flex-wrap: wrap;
+  margin: 15px auto 0 auto;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  box-sizing: border-box;
+  border: 5px solid #000;
+  cursor: pointer;
+}
+
+#green {
+  background-color: rgba(0,128,0,0.33);
+  border-right: 0;
+  border-bottom: 0;
+}
+
+#red {
+  background-color: rgba(255,0,0,0.33);
+  border-bottom: 0;
+}
+
+#yellow {
+  background-color: rgba(255,255,0, 0.33);
+  border-right: 0;
+}
+
+#blue {
+  background-color: rgba(0,0,255, 0.33);
+}
+
+#green.active {
+  background-color: green;
+}
+
+#red.active {
+  background-color: red;
+}
+
+#yellow.active {
+  background-color: yellow;
+}
+
+#blue.active {
+  background-color: blue;
+}
