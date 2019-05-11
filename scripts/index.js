@@ -23,7 +23,7 @@ function gameToggle(num) {
   toggleActive(num);
   setTimeout(function() {
     toggleActive(num);
-  }, 500);
+  }, 150);
 }
 
 function generateNum() {
@@ -61,12 +61,12 @@ function playRound() {
   for (let i = 0; i < answers.length; i++) {
     setTimeout(function() {
       gameToggle(answers[i]);
-    }, i * 1000);
+    }, i * 500);
   }
 
   setTimeout(() => {
     updateGameDescription("Now click");
-  }, answers.length * 1000);
+  }, answers.length * 500);
 }
 
 function checkAnswer(event) {
